@@ -24,7 +24,6 @@
 		2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B725184140DE00B6E5CD /* GSRootViewController.m */; };
 		2DD8B72918414E1D00B6E5CD /* GSSnapTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B72818414E1D00B6E5CD /* GSSnapTimelineViewController.m */; };
 		2DD8B72C184157AB00B6E5CD /* GSSnap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B72B184157AB00B6E5CD /* GSSnap.m */; };
-		2DD8B72F18415AEE00B6E5CD /* GSSnapCreatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B72E18415AEE00B6E5CD /* GSSnapCreatorController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +61,6 @@
 		2DD8B72818414E1D00B6E5CD /* GSSnapTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnapTimelineViewController.m; sourceTree = "<group>"; };
 		2DD8B72A184157AB00B6E5CD /* GSSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSnap.h; sourceTree = "<group>"; };
 		2DD8B72B184157AB00B6E5CD /* GSSnap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnap.m; sourceTree = "<group>"; };
-		2DD8B72D18415AEE00B6E5CD /* GSSnapCreatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSnapCreatorController.h; sourceTree = "<group>"; };
-		2DD8B72E18415AEE00B6E5CD /* GSSnapCreatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnapCreatorController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +129,6 @@
 				2DD8B6EF184136E900B6E5CD /* Supporting Files */,
 				2DD8B72A184157AB00B6E5CD /* GSSnap.h */,
 				2DD8B72B184157AB00B6E5CD /* GSSnap.m */,
-				2DD8B72D18415AEE00B6E5CD /* GSSnapCreatorController.h */,
-				2DD8B72E18415AEE00B6E5CD /* GSSnapCreatorController.m */,
 			);
 			path = GardenSnap;
 			sourceTree = "<group>";
@@ -308,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DD8B72F18415AEE00B6E5CD /* GSSnapCreatorController.m in Sources */,
 				2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */,
 				2DD8B6F5184136E900B6E5CD /* main.m in Sources */,
 				2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */,
@@ -520,6 +514,7 @@
 				2DD8B713184136EA00B6E5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DD8B714184136EA00B6E5CD /* Build configuration list for PBXNativeTarget "GardenSnapTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +523,7 @@
 				2DD8B716184136EA00B6E5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
