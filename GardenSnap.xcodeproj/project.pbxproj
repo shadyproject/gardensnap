@@ -21,6 +21,7 @@
 		2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */; };
 		2DD8B721184139B700B6E5CD /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B720184139B700B6E5CD /* iPhone.storyboard */; };
 		2DD8B723184139D700B6E5CD /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B722184139D700B6E5CD /* iPad.storyboard */; };
+		2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B725184140DE00B6E5CD /* GSRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAppDelegate.m; sourceTree = "<group>"; };
 		2DD8B720184139B700B6E5CD /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		2DD8B722184139D700B6E5CD /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		2DD8B724184140DE00B6E5CD /* GSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRootViewController.h; sourceTree = "<group>"; };
+		2DD8B725184140DE00B6E5CD /* GSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 		2DD8B71B184137BC00B6E5CD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2DD8B724184140DE00B6E5CD /* GSRootViewController.h */,
+				2DD8B725184140DE00B6E5CD /* GSRootViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			files = (
 				2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */,
 				2DD8B6F5184136E900B6E5CD /* main.m in Sources */,
+				2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GardenSnap/GardenSnap-Prefix.pch";
 				INFOPLIST_FILE = "GardenSnap/GardenSnap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -427,6 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GardenSnap/GardenSnap-Prefix.pch";
 				INFOPLIST_FILE = "GardenSnap/GardenSnap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
