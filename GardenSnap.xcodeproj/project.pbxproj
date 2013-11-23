@@ -23,6 +23,7 @@
 		2DD8B723184139D700B6E5CD /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B722184139D700B6E5CD /* iPad.storyboard */; };
 		2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B725184140DE00B6E5CD /* GSRootViewController.m */; };
 		2DD8B72918414E1D00B6E5CD /* GSSnapTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B72818414E1D00B6E5CD /* GSSnapTimelineViewController.m */; };
+		2DD8B72C184157AB00B6E5CD /* GSSnap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B72B184157AB00B6E5CD /* GSSnap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		2DD8B725184140DE00B6E5CD /* GSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRootViewController.m; sourceTree = "<group>"; };
 		2DD8B72718414E1D00B6E5CD /* GSSnapTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSnapTimelineViewController.h; sourceTree = "<group>"; };
 		2DD8B72818414E1D00B6E5CD /* GSSnapTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnapTimelineViewController.m; sourceTree = "<group>"; };
+		2DD8B72A184157AB00B6E5CD /* GSSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSnap.h; sourceTree = "<group>"; };
+		2DD8B72B184157AB00B6E5CD /* GSSnap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				2DD8B7181841372C00B6E5CD /* Delegates */,
 				2DD8B6FA184136E900B6E5CD /* Images.xcassets */,
 				2DD8B6EF184136E900B6E5CD /* Supporting Files */,
+				2DD8B72A184157AB00B6E5CD /* GSSnap.h */,
+				2DD8B72B184157AB00B6E5CD /* GSSnap.m */,
 			);
 			path = GardenSnap;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				2DD8B6F5184136E900B6E5CD /* main.m in Sources */,
 				2DD8B726184140DE00B6E5CD /* GSRootViewController.m in Sources */,
 				2DD8B72918414E1D00B6E5CD /* GSSnapTimelineViewController.m in Sources */,
+				2DD8B72C184157AB00B6E5CD /* GSSnap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
