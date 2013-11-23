@@ -7,12 +7,13 @@
 //
 
 #import "GSRootViewController.h"
-#import "GSSnapCreatorController.h"
+#import "GSSnap.h"
 
 static NSString *const kGSRootViewCellId = @"RootTableViewCell";
 
 @interface GSRootViewController ()
-
+@property (nonatomic, readonly) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *lastLocationReading;
 @end
 
 @implementation GSRootViewController
@@ -21,7 +22,8 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _locationManager = [[CLLocationManager alloc] init];
+        [_locationManager startMonitoringSignificantLocationChanges];
     }
     return self;
 }
@@ -66,14 +68,33 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
 
 #pragma mark - IBActions
 -(IBAction)newSnap:(id)sender{
-    //todo csm enforce the existance of a camera in the info.plist
-    GSSnapCreatorController *controller = [[GSSnapCreatorController alloc]
-                                           initWithViewController:self];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera Required"
+                                                        message:@"This application requres a camera."
+                                                       delegate:self cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
     
-    [controller showSnapCreatorWithCompletion:^(GSSnap *snap) {
-        NSLog(@"Got snap: %@", snap);
-    }];
+    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+    [imgPicker setSourceType: UIImagePickerControllerSourceTypeCamera];
+    [imgPicker setDelegate:self];
+    [self presentViewController:imgPicker animated:YES completion:nil];
+   
+}
+
+#pragma mark - CLLocationManagerDelegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    self.lastLocationReading = [locations firstObject];
+}
+
+#pragma mark - UIImagePickerController
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    GSSnap *snap = [[GSSnap alloc] init];
     
+    snap.image = info[UIImagePickerControllerOriginalImage];
+    snap.location = self.lastLocationReading.coordinate;
 }
 
 #pragma mark - Navigation

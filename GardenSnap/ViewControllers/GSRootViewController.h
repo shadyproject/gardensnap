@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GSRootViewController : UITableViewController
+@interface GSRootViewController : UITableViewController <UINavigationControllerDelegate,
+                                                         UIImagePickerControllerDelegate,
+                                                         CLLocationManagerDelegate>
 
 -(IBAction)newSnap:(id)sender;
 
