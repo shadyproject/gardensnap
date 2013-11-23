@@ -10,4 +10,6 @@
 
 @interface GSSnapTimelineViewController : UICollectionViewController
 
+
+-(IBAction)newSnap:(id)sender;
 @end

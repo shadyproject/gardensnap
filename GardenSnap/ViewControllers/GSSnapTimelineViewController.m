@@ -35,4 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+-(IBAction)newSnap:(id)sender{
+    NSLog(@"Pre populated snap here");
+}
+
 @end
