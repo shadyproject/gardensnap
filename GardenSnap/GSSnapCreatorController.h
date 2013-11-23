@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreLocation;
 
-@interface GSSnapCreatorController : NSObject
+@class GSSnap;
+
+typedef void (^GSSnapCreatedBlock)(GSSnap*);
+
+@interface GSSnapCreatorController : NSObject <UINavigationControllerDelegate,
+                                                UIImagePickerControllerDelegate,
+                                                CLLocationManagerDelegate>
+
+-(instancetype)initWithViewController:(UIViewController*)viewController;
+
+-(void)showSnapCreatorWithCompletion:(GSSnapCreatedBlock)completion;
 
 @end
