@@ -7,6 +7,8 @@
 //
 
 #import "GSRootViewController.h"
+#import "GSSnapCreatorController.h"
+
 static NSString *const kGSRootViewCellId = @"RootTableViewCell";
 
 @interface GSRootViewController ()
@@ -57,13 +59,21 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
                                                             forIndexPath:indexPath];
     
     cell.textLabel.text = [NSString stringWithFormat:@"Plant %d", indexPath.row];
+    [cell.imageView setImage:[UIImage imageNamed:@"placeholder"]];
     
     return cell;
 }
 
 #pragma mark - IBActions
 -(IBAction)newSnap:(id)sender{
-    NSLog(@"Take a new Snap here");
+    //todo csm enforce the existance of a camera in the info.plist
+    GSSnapCreatorController *controller = [[GSSnapCreatorController alloc]
+                                           initWithViewController:self];
+    
+    [controller showSnapCreatorWithCompletion:^(GSSnap *snap) {
+        NSLog(@"Got snap: %@", snap);
+    }];
+    
 }
 
 #pragma mark - Navigation
