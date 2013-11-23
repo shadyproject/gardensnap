@@ -8,6 +8,8 @@
 
 #import "GSSnapTimelineViewController.h"
 
+static NSString *const kONCSnapTimelineCellId = @"SnapTimelineCell";
+
 @interface GSSnapTimelineViewController ()
 
 @end
@@ -33,6 +35,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UICollectionView
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView
+                cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kONCSnapTimelineCellId
+                                                                           forIndexPath:indexPath];
+    
+    return cell;
 }
 
 #pragma mark - IBActions
