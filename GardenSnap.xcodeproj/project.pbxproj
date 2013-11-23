@@ -19,6 +19,8 @@
 		2DD8B70C184136EA00B6E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B70A184136EA00B6E5CD /* InfoPlist.strings */; };
 		2DD8B70E184136EA00B6E5CD /* GardenSnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B70D184136EA00B6E5CD /* GardenSnapTests.m */; };
 		2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */; };
+		2DD8B721184139B700B6E5CD /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B720184139B700B6E5CD /* iPhone.storyboard */; };
+		2DD8B723184139D700B6E5CD /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B722184139D700B6E5CD /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2DD8B70D184136EA00B6E5CD /* GardenSnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GardenSnapTests.m; sourceTree = "<group>"; };
 		2DD8B71D1841380C00B6E5CD /* GSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAppDelegate.h; sourceTree = "<group>"; };
 		2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAppDelegate.m; sourceTree = "<group>"; };
+		2DD8B720184139B700B6E5CD /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		2DD8B722184139D700B6E5CD /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 		2DD8B71C184137CB00B6E5CD /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				2DD8B720184139B700B6E5CD /* iPhone.storyboard */,
+				2DD8B722184139D700B6E5CD /* iPad.storyboard */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD8B723184139D700B6E5CD /* iPad.storyboard in Resources */,
 				2DD8B6F3184136E900B6E5CD /* InfoPlist.strings in Resources */,
+				2DD8B721184139B700B6E5CD /* iPhone.storyboard in Resources */,
 				2DD8B6FB184136E900B6E5CD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +414,7 @@
 				GCC_PREFIX_HEADER = "GardenSnap/GardenSnap-Prefix.pch";
 				INFOPLIST_FILE = "GardenSnap/GardenSnap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,6 +428,7 @@
 				GCC_PREFIX_HEADER = "GardenSnap/GardenSnap-Prefix.pch";
 				INFOPLIST_FILE = "GardenSnap/GardenSnap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
