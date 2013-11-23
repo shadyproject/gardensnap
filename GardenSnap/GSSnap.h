@@ -10,7 +10,7 @@
 @import CoreLocation;
 
 @interface GSSnap : NSObject
-@property (nonatomic, strong) NSDate *dateStamp;
+@property (nonatomic, readonly) NSDate *dateStamp;
 @property (nonatomic, assign) CLLocationCoordinate2D location;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, copy) NSString *plantName;

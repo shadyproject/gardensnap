@@ -9,5 +9,16 @@
 #import "GSSnap.h"
 
 @implementation GSSnap
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        _dateStamp = [NSDate date];
+    }
+    return self;
+}
 
+-(NSString*)description{
+    NSString *desc = [NSString stringWithFormat:@"Snap %@ created %@", self.plantName, self.dateStamp];
+    return desc;
+}
 @end
