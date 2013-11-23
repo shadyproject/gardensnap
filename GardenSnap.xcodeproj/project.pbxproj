@@ -12,13 +12,13 @@
 		2DD8B6ED184136E900B6E5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8B6EC184136E900B6E5CD /* UIKit.framework */; };
 		2DD8B6F3184136E900B6E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B6F1184136E900B6E5CD /* InfoPlist.strings */; };
 		2DD8B6F5184136E900B6E5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B6F4184136E900B6E5CD /* main.m */; };
-		2DD8B6F9184136E900B6E5CD /* GSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B6F8184136E900B6E5CD /* GSAppDelegate.m */; };
 		2DD8B6FB184136E900B6E5CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B6FA184136E900B6E5CD /* Images.xcassets */; };
 		2DD8B702184136EA00B6E5CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8B701184136EA00B6E5CD /* XCTest.framework */; };
 		2DD8B703184136EA00B6E5CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8B6E8184136E900B6E5CD /* Foundation.framework */; };
 		2DD8B704184136EA00B6E5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8B6EC184136E900B6E5CD /* UIKit.framework */; };
 		2DD8B70C184136EA00B6E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8B70A184136EA00B6E5CD /* InfoPlist.strings */; };
 		2DD8B70E184136EA00B6E5CD /* GardenSnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B70D184136EA00B6E5CD /* GardenSnapTests.m */; };
+		2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +40,14 @@
 		2DD8B6F2184136E900B6E5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DD8B6F4184136E900B6E5CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DD8B6F6184136E900B6E5CD /* GardenSnap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GardenSnap-Prefix.pch"; sourceTree = "<group>"; };
-		2DD8B6F7184136E900B6E5CD /* GSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSAppDelegate.h; sourceTree = "<group>"; };
-		2DD8B6F8184136E900B6E5CD /* GSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSAppDelegate.m; sourceTree = "<group>"; };
 		2DD8B6FA184136E900B6E5CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2DD8B700184136EA00B6E5CD /* GardenSnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GardenSnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD8B701184136EA00B6E5CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2DD8B709184136EA00B6E5CD /* GardenSnapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GardenSnapTests-Info.plist"; sourceTree = "<group>"; };
 		2DD8B70B184136EA00B6E5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DD8B70D184136EA00B6E5CD /* GardenSnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GardenSnapTests.m; sourceTree = "<group>"; };
+		2DD8B71D1841380C00B6E5CD /* GSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAppDelegate.h; sourceTree = "<group>"; };
+		2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,11 @@
 		2DD8B6EE184136E900B6E5CD /* GardenSnap */ = {
 			isa = PBXGroup;
 			children = (
-				2DD8B6F7184136E900B6E5CD /* GSAppDelegate.h */,
-				2DD8B6F8184136E900B6E5CD /* GSAppDelegate.m */,
+				2DD8B71C184137CB00B6E5CD /* Nibs */,
+				2DD8B71B184137BC00B6E5CD /* ViewControllers */,
+				2DD8B71A1841374A00B6E5CD /* Views */,
+				2DD8B7191841373D00B6E5CD /* Categories */,
+				2DD8B7181841372C00B6E5CD /* Delegates */,
 				2DD8B6FA184136E900B6E5CD /* Images.xcassets */,
 				2DD8B6EF184136E900B6E5CD /* Supporting Files */,
 			);
@@ -142,6 +145,43 @@
 				2DD8B70A184136EA00B6E5CD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DD8B7181841372C00B6E5CD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8B71D1841380C00B6E5CD /* GSAppDelegate.h */,
+				2DD8B71E1841380C00B6E5CD /* GSAppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		2DD8B7191841373D00B6E5CD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2DD8B71A1841374A00B6E5CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DD8B71B184137BC00B6E5CD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DD8B71C184137CB00B6E5CD /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DD8B6F9184136E900B6E5CD /* GSAppDelegate.m in Sources */,
+				2DD8B71F1841380C00B6E5CD /* GSAppDelegate.m in Sources */,
 				2DD8B6F5184136E900B6E5CD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
