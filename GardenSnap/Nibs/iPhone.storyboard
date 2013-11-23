@@ -4,30 +4,92 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
+        <!--Root View Controller - Garden Snap-->
         <scene sceneID="HtP-4G-DxC">
             <objects>
-                <tableViewController id="Zft-UL-h8v" sceneMemberID="viewController">
+                <tableViewController id="Zft-UL-h8v" customClass="GSRootViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cOl-Bl-P1C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jxZ-Nn-eCh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RootTableViewCell" textLabel="Q5A-hO-ixv" style="IBUITableViewCellStyleDefault" id="jxZ-Nn-eCh">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jxZ-Nn-eCh" id="Gb6-Sa-Rq0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q5A-hO-ixv">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2eD-Ha-4T8" kind="push" identifier="ViewTimelineSegue" id="qsT-4x-KNm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EyC-pQ-Kpd"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="f4W-7I-u7L"/>
+                        <barButtonItem systemItem="camera" id="5AQ-QW-1pC">
+                            <connections>
+                                <action selector="newSnap:" destination="Zft-UL-h8v" id="VjE-6c-v8B"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Yma-QB-I15"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Garden Snap" id="EyC-pQ-Kpd"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfS-24-PPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="355" y="-27"/>
+        </scene>
+        <!--Collection View Controller - Snap Timeline-->
+        <scene sceneID="vjt-le-Cfn">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="2eD-Ha-4T8" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="EbP-gA-QHA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y7E-Ay-Ffr">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YDz-9p-D4D">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2eD-Ha-4T8" id="pP7-9Q-WMt"/>
+                            <outlet property="delegate" destination="2eD-Ha-4T8" id="Dpk-6Y-XSq"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3uO-RJ-2dE"/>
+                        <barButtonItem systemItem="camera" id="Hv7-ys-6MW"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="rNy-XT-heh"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Snap Timeline" id="cjI-Uh-UAb"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ov-wa-FyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mFs-Br-2aV">
