@@ -10,4 +10,6 @@
 
 @interface GSRootViewController : UITableViewController
 
+-(IBAction)newSnap:(id)sender;
+
 @end
