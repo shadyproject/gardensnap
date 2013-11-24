@@ -10,6 +10,7 @@
 
 @interface GSSnapTimelineViewController : UICollectionViewController
 
+@property (nonatomic, strong) NSString *timelinePlantName;
 
 -(IBAction)newSnap:(id)sender;
 @end

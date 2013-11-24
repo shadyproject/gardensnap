@@ -7,6 +7,7 @@
 //
 
 #import "GSSnapTimelineViewController.h"
+#import "GSSnapCreatorViewController.h"
 
 static NSString *const kONCSnapTimelineCellId = @"SnapTimelineCell";
 
@@ -49,6 +50,15 @@ static NSString *const kONCSnapTimelineCellId = @"SnapTimelineCell";
 #pragma mark - IBActions
 -(IBAction)newSnap:(id)sender{
     NSLog(@"Pre populated snap here");
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSString *segueName = [segue identifier];
+    
+    if ([segueName isEqualToString:@"NewSnapSegue"]) {
+        GSSnapCreatorViewController *controller = segue.destinationViewController;
+        controller.plantName = self.timelinePlantName;
+    }
 }
 
 @end
