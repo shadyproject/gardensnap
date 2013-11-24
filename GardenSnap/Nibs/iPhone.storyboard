@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Snap Creator View Controller-->
+        <!--Snap Creator View Controller - New Snap-->
         <scene sceneID="HYj-gF-VKA">
             <objects>
                 <viewController id="Ar7-lU-AVO" customClass="GSSnapCreatorViewController" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="0el-WM-Z5z"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="LXE-55-5U4"/>
+                    <navigationItem key="navigationItem" title="New Snap" id="LXE-55-5U4"/>
                     <connections>
                         <outlet property="nameField" destination="c9Y-Lw-ZFm" id="HAG-PY-0ct"/>
                         <outlet property="notesField" destination="thK-60-htf" id="Vfl-pr-2qT"/>
