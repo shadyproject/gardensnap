@@ -14,6 +14,7 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
 @interface GSRootViewController ()
 @property (nonatomic, readonly) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *lastLocationReading;
+@property (nonatomic, strong) UIImagePickerController *imgPicker;
 @end
 
 @implementation GSRootViewController
@@ -77,10 +78,10 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
         return;
     }
     
-    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
-    [imgPicker setSourceType: UIImagePickerControllerSourceTypeCamera];
-    [imgPicker setDelegate:self];
-    [self presentViewController:imgPicker animated:YES completion:nil];
+    self.imgPicker = [[UIImagePickerController alloc] init];
+    [self.imgPicker setSourceType: UIImagePickerControllerSourceTypeCamera];
+    [self.imgPicker setDelegate:self];
+    [self presentViewController:self.imgPicker animated:YES completion:nil];
    
 }
 
@@ -95,6 +96,12 @@ static NSString *const kGSRootViewCellId = @"RootTableViewCell";
     
     snap.image = info[UIImagePickerControllerOriginalImage];
     snap.location = self.lastLocationReading.coordinate;
+    
+    [self.imgPicker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSLog(@"Created snap: %@", snap);
+    
+    //todo transition here
 }
 
 #pragma mark - Navigation
