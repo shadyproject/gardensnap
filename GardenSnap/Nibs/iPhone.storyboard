@@ -4,6 +4,64 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Snap Creator View Controller-->
+        <scene sceneID="HYj-gF-VKA">
+            <objects>
+                <viewController id="Ar7-lU-AVO" customClass="GSSnapCreatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iAR-5S-0db"/>
+                        <viewControllerLayoutGuide type="bottom" id="QZu-cK-taW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RWp-ss-o3E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OB2-zt-Xrq">
+                                <rect key="frame" x="20" y="65" width="280" height="262"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-Lw-ZFm">
+                                <rect key="frame" x="20" y="335" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ar7-lU-AVO" id="Xoz-Al-Es8"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="thK-60-htf">
+                                <rect key="frame" x="20" y="373" width="280" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ar7-lU-AVO" id="hGN-S6-5Pd"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="HEr-XG-ig2"/>
+                        <barButtonItem systemItem="save" id="3Uy-nu-77a">
+                            <connections>
+                                <action selector="saveSnap:" destination="Ar7-lU-AVO" id="MXn-65-eVI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="0el-WM-Z5z"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="LXE-55-5U4"/>
+                    <connections>
+                        <outlet property="nameField" destination="c9Y-Lw-ZFm" id="HAG-PY-0ct"/>
+                        <outlet property="notesField" destination="thK-60-htf" id="Vfl-pr-2qT"/>
+                        <outlet property="snapImage" destination="OB2-zt-Xrq" id="c6x-5V-pfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfV-JE-cHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="636"/>
+        </scene>
         <!--Root View Controller - Garden Snap-->
         <scene sceneID="HtP-4G-DxC">
             <objects>
@@ -42,7 +100,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="f4W-7I-u7L"/>
                         <barButtonItem systemItem="camera" id="5AQ-QW-1pC">
                             <connections>
-                                <action selector="newSnap:" destination="Zft-UL-h8v" id="VjE-6c-v8B"/>
+                                <segue destination="Ar7-lU-AVO" kind="push" identifier="NewSnapSegue" id="DPJ-Xb-L6a"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Yma-QB-I15"/>
@@ -172,7 +230,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="3uO-RJ-2dE"/>
                         <barButtonItem systemItem="camera" id="Hv7-ys-6MW">
                             <connections>
-                                <action selector="newSnap:" destination="2eD-Ha-4T8" id="5nA-ly-8yb"/>
+                                <segue destination="Ar7-lU-AVO" kind="push" identifier="NewSnapSegue" id="NwA-dX-sad"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="rNy-XT-heh"/>
@@ -211,4 +269,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="NwA-dX-sad"/>
+    </inferredMetricsTieBreakers>
 </document>
