@@ -44,6 +44,7 @@
         [self showImagePicker];
     }
 
+    [super viewDidAppear:animated];
 }
 
 -(void)showImagePicker{
